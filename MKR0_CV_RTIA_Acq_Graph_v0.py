@@ -99,7 +99,7 @@ CONV_PERIOD_MKR0  = 1.0 * 1000000.    # in order to convert in micros and take c
 DELAY_STAB_MKR0   = 2.0
 
 R10k         = 10000.0                   # to be change to the right value
-RTIA_MKR0    =  4700.0
+RTIA_MKR0    =  510.0 #4700.0
 KOHM         =  1000.0
 CODE_MAX_RTIA = 255
 CODE_MIN_RTIA =  12
@@ -181,7 +181,7 @@ def set_contants(board):
 #********************************* 
 def set_rtia(board):
         global rtia_val
-        str_rtia = input(" Enter the RTIA value in kΩ (Return => 4.7 kΩ) : ")
+        str_rtia = input(" Enter the RTIA value in kΩ (Return => 510 Ω) : ")
         if (str_rtia == EMPTY):
                 rtia_val = RTIA_MKR0
         else:
