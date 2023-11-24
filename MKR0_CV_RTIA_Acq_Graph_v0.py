@@ -79,7 +79,7 @@ WARNING[1]  ="*   WARNING - You have reached the MAXIMUM number of acquisition  
 WARNING[2]  ="*   WARNING -    You can't set up a new acquisition right now      *"
 WARNING[3]  ="*   WARNING -        Your FILES will be overwritten                *"
 WARNING[4]  ="*   WARNING -            Your DATA will be LOST                    *"
-WARNING[5]  ="*   WARNING - Consider CLOSING this program and OPENNING it again  *"
+WARNING[5]  ="*   WARNING - Consider CLOSING this program and OPENING it again   *"
 WARNING[6]  ="*   WARNING -        The only available Command is TRA             *"
 WARNING[7]  ="********************************************************************" + NEW_LINE
 MAX_ACQ     = 16
@@ -372,6 +372,9 @@ def plot_cycle (index_acq, nb_cycle, x_data, y_data):
         plt.xlabel("E (V)")             # x labels
         if (str_unit  == "uA"):
                     str_unit = "µA"
+        if (str_unit  == ""):
+                    print("Using default unit: mA.")
+                    str_unit = "mA"
         plt.ylabel("I (" + str_unit + ")")            # y labels
         plt.legend()
         plt.show()          # Show graph on screen
