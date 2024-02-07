@@ -19,3 +19,6 @@ List of connections:
 For testing, connect:
 - WE (working electrode) on J2 of PassStat to one side of test resistor
 - RE and CE (reference and counter electrodes) on J2 of PassStat to other side of test resistor
+
+## Software
+Refer to the "Computer Control" section of the _HardwareX_ paper. If you are not running Linux, you will have to change Line 33 of the python script. The prefix of the port number will depend on your operating system, and the port number will vary according to what your computer assigns. You will have to [check the port number in Arduino IDE](https://support.arduino.cc/hc/en-us/articles/4406856349970-Select-board-and-port-in-Arduino-IDE)).
