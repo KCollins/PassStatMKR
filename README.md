@@ -21,6 +21,11 @@ For testing, connect:
 - RE and CE (reference and counter electrodes) on J2 of PassStat to other side of test resistor
 
 ## Software
+### Required python libraries
+You will need the following python libraries installed to run the python script: pip, pyserial, numpy and matplotlib. 
+(Make sure to install pyserial and _not_ serial!)
+
+### Connecting to the Board
 Refer to the "Computer Control" section of the _HardwareX_ paper. If you are not running Linux, you will have to change Line 33 of the python script. The prefix of the port number will depend on your operating system, and the port number will vary according to what your computer assigns. You will have to [check the port number in Arduino IDE](https://support.arduino.cc/hc/en-us/articles/4406856349970-Select-board-and-port-in-Arduino-IDE)). Once you have your port number, run the python script from the terminal in your computer.
 
 If the computer has difficulty connecting, you may want to close the Arduino IDE. The python script probably won't be able to run if the serial window is open.
