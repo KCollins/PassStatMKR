@@ -13,8 +13,8 @@ Jumper positions: With capacitors C3 and C4 at the "north" end of the board:
 List of connections:
 - IN1 on J1 of PassStat to DAC/A0 on MKR Zero
 - CURR_OUT on PassStat to A1 on MKR Zero
-- V- on J4 of PassStat to ground rail on breadboard
-- V+ on J4 of PassStat to 5V rail on breadboard
+- V- on J4 of PassStat GND on MKR0 (may wish to connect both to ground rail on breadboard)
+- V+ on J4 of PassStat to 5V on MKR0 (may wish to connect both to positive rail on breadboard)
 
 For testing, connect:
 - WE (working electrode) on J2 of PassStat to one side of test resistor
