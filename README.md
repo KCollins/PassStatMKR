@@ -21,4 +21,39 @@ For testing, connect:
 - RE and CE (reference and counter electrodes) on J2 of PassStat to other side of test resistor
 
 ## Software
-Refer to the "Computer Control" section of the _HardwareX_ paper. If you are not running Linux, you will have to change Line 33 of the python script. The prefix of the port number will depend on your operating system, and the port number will vary according to what your computer assigns. You will have to [check the port number in Arduino IDE](https://support.arduino.cc/hc/en-us/articles/4406856349970-Select-board-and-port-in-Arduino-IDE)).
+Refer to the "Computer Control" section of the _HardwareX_ paper. If you are not running Linux, you will have to change Line 33 of the python script. The prefix of the port number will depend on your operating system, and the port number will vary according to what your computer assigns. You will have to [check the port number in Arduino IDE](https://support.arduino.cc/hc/en-us/articles/4406856349970-Select-board-and-port-in-Arduino-IDE)). Once you have your port number, run the python script from the terminal in your computer.
+
+If the computer has difficulty connecting, you may want to close the Arduino IDE. The python script probably won't be able to run if the serial window is open.
+
+An example run of the script in terminal might look something like this: 
+```
+aurelius@MarcusAurelius:~/Documents/PassStatMKR$ python3 MKR0_CV_RTIA_Acq_Graph_v0.py 
+ Enter the port's number (Return => default port) : 0
+Arduino MKR0
+
+Arduino MKR0 board detected on "/dev/ttyACM0"
+
+ Enter the RTIA value in kΩ (Return => 1 MΩ) : 
+ Enter the curent unit (mA, uA, nA or pA) (Return => mA) : 
+Enter Parameters: cycle count, min voltage, max voltage, slew rate. (e.g.:  2,-1.25,1.25,0.5 ). Hit enter, then ACQ to start acquisition and TRA to graph the data 
+
+>>2,-1.25,1.25,0.5
+The acquisition will take roughly :  22.00  seconds
+You Transmitted : 2,768,256,9775
+>>ACQ
+Acquisition Started
+Data/Acq_Pot_MKR_ZERO0.txt
+Acquisition Ended 
+>>TRA
+Enter the acquisition's number to graph [0,0] (Return => last acq) : 
+Tracing Started 
+Using default unit: mA.
+Tracing Ended 
+>>ACQ
+Acquisition Started
+Data/Acq_Pot_MKR_ZERO1.txt
+Acquisition Ended 
+>>TRA
+Enter the acquisition's number to graph [0,1] (Return => last acq) : 
+Tracing Started 
+```
